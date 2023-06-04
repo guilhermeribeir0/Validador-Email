@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Email</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container-top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 40px 0px;
+        }
+
+        .container-validation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container-validation button {
+            margin: 10px 0px; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-top">
+        <h1>
+            Validador de Email
+        </h1>
+        <p>
+            Informe um email abaixo e veja se o mesmo é válido.
+        </p>
+    </div>
+    <div class="container-validation">
+        <input id="email" type="text">
+        <button type="button" onclick="validacao()">Validar</button>
+        <p id="sucesso" style="display: none;">
+            Email Válido!
+        </p>
+        <p id="erro" style="display: none;">
+            Email Inválido!
+        </p>
+    </div>
+
+</body>
+
+<script>
+    function validaEmail(email) {
+        var padraoEmail = /^[\w._-]+@[\w_.-]+\.[\w]{2,}/i;
+        if (padraoEmail.test(email)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function validacao() {
+        var email = document.getElementById('email').value;
+
+        var resultadoValidacao = validaEmail(email);
+
+        document.getElementById('sucesso').style.display = 'none';
+        document.getElementById('erro').style.display = 'none';
+
+        if (resultadoValidacao == true) {
+            document.getElementById('sucesso').style.display = 'block';
+        } else {
+            document.getElementById('erro').style.display = 'block';
+        }
+    }
+
+</script>
+
+</html>
