@@ -10,23 +10,30 @@
 </head>
 
 <body>
-    <div class="container-top">
-        <h1>
-            Validador de Email
-        </h1>
-        <p>
-            Informe um email abaixo e veja se o mesmo é válido.
-        </p>
-    </div>
-    <div class="container-validation">
-        <input id="email" type="text">
-        <button type="button" onclick="validacao()">Validar</button>
-        <p id="sucesso" style="display: none;">
-            Email Válido!
-        </p>
-        <p id="erro" style="display: none;">
-            Email Inválido!
-        </p>
+    <div class="container">
+        <div class="container-top">
+            <h1>
+                Validador de Email
+            </h1>
+            <p>
+                Informe um email abaixo e veja se o mesmo é válido.
+            </p>
+        </div>
+        <div class="container-validation">
+            <form>
+                <input id="email" type="text">
+            </form>
+            <button type="button" onclick="validacao()">Validar</button>
+            <p id="sucesso" style="display: none;">
+                Email Válido!
+            </p>
+            <p id="erro" style="display: none;">
+                Email Inválido!
+            </p>
+        </div>
+        <div class="footer">
+            <p>Desenvolvido por <b>Guilherme Riberio &reg;</b></p>
+        </div>
     </div>
 </body>
 

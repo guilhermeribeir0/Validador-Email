@@ -3,6 +3,18 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+body {
+  background-color: #000;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container-top {
@@ -20,6 +32,32 @@
   flex-direction: column;
 }
 
+.container-validation form input {
+  font-size: 1em;
+  width: 400px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
 .container-validation button {
-  margin: 10px 0px; 
+  margin: 10px 0px 20px 0px; 
+  background-color: #4412ca;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.container-validation button:hover {
+  background-color: #7347ee;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  color: #4412ca;
+  margin-top: 40px;
 }
