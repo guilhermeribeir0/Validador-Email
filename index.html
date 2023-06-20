@@ -6,33 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validador de Email</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .container-top {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin: 40px 0px;
-        }
-
-        .container-validation {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .container-validation button {
-            margin: 10px 0px; 
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -54,34 +28,8 @@
             Email Inválido!
         </p>
     </div>
-
 </body>
 
-<script>
-    function validaEmail(email) {
-        var padraoEmail = /^[\w._-]+@[\w_.-]+\.[\w]{2,}/i;
-        if (padraoEmail.test(email)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    function validacao() {
-        var email = document.getElementById('email').value;
-
-        var resultadoValidacao = validaEmail(email);
-
-        document.getElementById('sucesso').style.display = 'none';
-        document.getElementById('erro').style.display = 'none';
-
-        if (resultadoValidacao == true) {
-            document.getElementById('sucesso').style.display = 'block';
-        } else {
-            document.getElementById('erro').style.display = 'block';
-        }
-    }
-
-</script>
+<script src="./script.js"></script>
 
 </html>
